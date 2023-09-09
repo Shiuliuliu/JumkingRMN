@@ -349,6 +349,26 @@ class player
             this.drawu()
         }
        else this.drawr()
+       if(this.velocity.x > 0)
+       {
+        this.image = this.imagerr
+       }
+       else if(this.velocity.x < 0)
+       {
+        this.image = this.imagerl
+       }
+       if(this.velocity.x ==0)
+       {
+        if(this.image == this.imagerr)
+        {
+            this.image = this.imageidler
+        }
+        else if(this.image == this.imagerl)
+        {
+            this.image = this.imageidlel
+        }
+       }
+       
 
 
         this.position.x +=this.velocity.x
@@ -389,11 +409,15 @@ window.addEventListener('keydown',(event) =>
 {
     switch(event.key)
     {
-        case 'd': keys.right = true
-        player1.image = player1.imagerr
+        case 'd': 
+        keys.left = false
+        keys.right = true
+        
         break
-        case 'a': keys.left = true
-        player1.image = player1.imagerl
+        case 'a':
+            keys.right = false
+             keys.left = true
+        
         break
         case ' ' :
             keys.up = true
@@ -415,11 +439,8 @@ window.addEventListener('keyup',(event) =>
     switch(event.key)
     {
         case 'd' :keys.right = false
-        player1.image = player1.imageidler
         break
         case 'a' : keys.left = false
-       
-        player1.image = player1.imageidlel
         break
         case ' ' : 
         if(dem>4&&dem<80)
@@ -519,17 +540,16 @@ if(keys.left && keys.up==false)
 {
     player1.velocity.x =0
 }
-
 }
-else if(keys.right&&keys.up == false)
+else if(keys.right&&keys.up==false)
 {
     player1.velocity.x = 6
     if(player1.position.x + 60 >canvas.width )
 {
     player1.velocity.x =0
-}  
-   
+}    
 }
+
 else player1.velocity.x = 0
 //----------------tuong---------------------
 
