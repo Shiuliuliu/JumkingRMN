@@ -1,7 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
-canvas.width = window.screen.availWidth *2
-canvas.height = window.screen.availHeight*2
+canvas.width = 2732
+canvas.height = 1452
 
 const bg = new Image()
 bg.src = './back.png'
