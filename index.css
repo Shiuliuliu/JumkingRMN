@@ -1,6 +1,14 @@
 body
 {
     background-color: rgb(32, 58, 6);
+    margin: auto;
+    align-items: center;
+}
+canvas
+{
+    margin-top: 45px;
+    align-items: center;
+
 }
 button
 {
@@ -11,3 +19,4 @@ button
     text-align:center;
     
 }
+
