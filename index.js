@@ -398,7 +398,7 @@ window.addEventListener('keydown',(event) =>
         case ' ' :
             keys.up = true
             player1.velocity.x = 0
-            if(dem<=80
+            if(dem<=80&&player1.velocity.y ==0
 
                 ) 
             {
