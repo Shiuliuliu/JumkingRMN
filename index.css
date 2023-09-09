@@ -1,0 +1,13 @@
+body
+{
+    background-color: rgb(32, 58, 6);
+}
+button
+{
+    font-style: italic;
+    color: red;
+    border-radius: 30px;
+    border-color: crimson;
+    text-align:center;
+    
+}
